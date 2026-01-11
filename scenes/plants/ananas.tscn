@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfwhmx1x5g2al"]
+
+[ext_resource type="Texture2D" uid="uid://cqkbe7cft1n6k" path="res://assets/sprites/kwiatuszki.png" id="1_sysxb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j74yf"]
+atlas = ExtResource("1_sysxb")
+region = Rect2(175, 0, 35, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb47j"]
+atlas = ExtResource("1_sysxb")
+region = Rect2(210, 0, 35, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7hk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j74yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb47j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
+[node name="Ananas" type="AnimatedSprite2D"]
+z_index = 4
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_k7hk7")
+autoplay = "default"
+frame_progress = 0.023679934

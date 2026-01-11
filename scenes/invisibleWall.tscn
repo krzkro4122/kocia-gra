@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvldixu5a1omn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lnu2h"]
+bounce = 0.28
+
+[node name="InvisibleWall" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_lnu2h")
