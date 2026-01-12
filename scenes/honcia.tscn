@@ -165,16 +165,17 @@ size = Vector2(26, 25)
 
 [node name="Honcia" type="CharacterBody2D"]
 z_index = 5
+collision_layer = 2
 script = ExtResource("1_hdt4a")
 move_speed = 400
-jump_height = 400
+jump_height = 500
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_c0fbc")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.38870537
+frame_progress = 0.63718927
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)

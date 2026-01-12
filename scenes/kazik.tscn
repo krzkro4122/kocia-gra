@@ -172,7 +172,10 @@ size = Vector2(26.25, 25)
 
 [node name="Kazik" type="CharacterBody2D"]
 z_index = 5
+collision_layer = 2
 script = ExtResource("1_v46rm")
+move_speed = 400
+jump_height = 500
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -180,7 +183,7 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_mjqat")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.034082837
+frame_progress = 0.37064397
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
@@ -189,5 +192,3 @@ shape = SubResource("RectangleShape2D_v46rm")
 [node name="GroundDetector" type="RayCast2D" parent="."]
 target_position = Vector2(0, 69)
 collision_mask = 3
-
-[connection signal="die" from="." to="." method="_on_die"]

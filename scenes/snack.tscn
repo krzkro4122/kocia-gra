@@ -44,6 +44,7 @@ _data = {
 }
 
 [node name="Snack" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_pc4uj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
