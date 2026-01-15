@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6oex88824cby"]
+
+[ext_resource type="FontFile" uid="uid://6p2gv2egpu2d" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_ahhtf"]
+
+[sub_resource type="Theme" id="Theme_oo0fn"]
+default_font = ExtResource("1_ahhtf")
+default_font_size = 64
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -106.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme = SubResource("Theme_oo0fn")
+text = "Smaczki: X / X"
+horizontal_alignment = 2
+vertical_alignment = 1
