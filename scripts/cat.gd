@@ -1,17 +1,21 @@
 extends CharacterBody2D
 
-const cat_name = "kazik"
-
-@export var move_speed: int = 300
-@export var jump_height: int = 300
+@export var cat_name: String
+@export var move_speed: int 
+@export var jump_height: int
+@export var animated_sprite: AnimatedSprite2D
 
 @onready var jump_velocity = -1 * jump_height
 @onready var ground_detector: RayCast2D = $GroundDetector
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var jump_action_name = "%s_jump" % cat_name 
-var move_left_action_name = "%s_move_left" % cat_name
-var move_right_action_name = "%s_move_right" % cat_name
+var jump_action_name: String
+var move_left_action_name: String
+var move_right_action_name: String
+
+func _ready() -> void:	
+	jump_action_name = "%s_jump" % cat_name 
+	move_left_action_name = "%s_move_left" % cat_name
+	move_right_action_name = "%s_move_right" % cat_name
 
 
 func _physics_process(delta: float) -> void:

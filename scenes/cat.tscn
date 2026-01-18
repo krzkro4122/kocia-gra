@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cphwv4vaft32m"]
+
+[ext_resource type="Script" uid="uid://boa32aqpnte2d" path="res://scripts/cat.gd" id="1_se5fe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0fbc"]
+size = Vector2(26, 25)
+
+[node name="Cat" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_se5fe")
+move_speed = 400
+jump_height = 500
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_c0fbc")
+
+[node name="GroundDetector" type="RayCast2D" parent="."]
+target_position = Vector2(0, 69)
+collision_mask = 3
