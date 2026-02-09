@@ -1,79 +1,48 @@
 extends CharacterBody2D
 
+signal Died
+
+
 @export var cat_name: String
-@export var move_speed: int 
-@export var jump_height: int
 @export var animated_sprite: AnimatedSprite2D
 
-@onready var jump_velocity = -1 * jump_height
+@export var jump_height: int
+@export var move_speed: int
+
 @onready var ground_detector: RayCast2D = $GroundDetector
-
-var jump_action_name: String
-var move_left_action_name: String
-var move_right_action_name: String
-
-func _ready() -> void:	
-	jump_action_name = "%s_jump" % cat_name 
-	move_left_action_name = "%s_move_left" % cat_name
-	move_right_action_name = "%s_move_right" % cat_name
+@onready var game_manager: Node = %GameManager
+@onready var explosion_sprite: AnimatedSprite2D = $ExplosionSprite
 
 
-func _physics_process(delta: float) -> void:
-	apply_gravity(delta)
-	handle_jump()
-	
-	var direction = handle_horizontal_move()
-	turn_horizontal(direction)
-	play_animation(direction)
-	
-	move_and_slide()
+var dead = false
+var last_safe_position
+
+func _ready() -> void:
+	Died.connect(game_manager.cat_died)
+	last_safe_position = position
 
 
-func apply_gravity(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
- 
-
-func handle_jump() -> void:
-	if Input.is_action_just_pressed(jump_action_name) and is_on_floor():
-		velocity.y = jump_velocity
-
-
-func play_animation(direction: float) -> void:
-	var animation_to_play = "idle"
-	
-	if is_on_floor():
-		if direction == 0:
-			animation_to_play = "idle"
-		else: 
-			animation_to_play = "run"
-	else:
-		if velocity.y > 0:
-			if ground_detector.is_colliding():
-				animation_to_play = "land"
-			else:
-				animation_to_play = "fall"
-		if velocity.y < 0:
-			if ground_detector.is_colliding():
-				animation_to_play = "jump"
-			else:
-				animation_to_play = "ascend"
+func _physics_process(_delta: float) -> void:
+	if not dead:
 		
-	animated_sprite.play(animation_to_play)
-
-
-func handle_horizontal_move() -> float:
-	var direction := Input.get_axis(move_left_action_name, move_right_action_name)
-	if direction:
-		velocity.x = direction * move_speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, move_speed)
+		if self.is_on_floor_only() and ground_detector.is_colliding():
+			last_safe_position = position
 		
-	return direction
+		move_and_slide()
 
 
-func turn_horizontal(direction: float) -> void:
-	if direction == 1:
-		animated_sprite.flip_h = false
-	elif direction == -1:
-		animated_sprite.flip_h = true
+func _on_died(cat_name: String) -> void:
+	dead = true
+	animated_sprite.flip_v = true
+	explosion_sprite.play("explode")
+
+
+func respawn() -> void:
+	print(cat_name + " respawned!")
+	dead = false
+	animated_sprite.flip_v = false
+	position = last_safe_position
+
+
+func _on_respawn_timer_timeout() -> void:
+	respawn()

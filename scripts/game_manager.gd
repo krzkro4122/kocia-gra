@@ -1,10 +1,14 @@
 extends Node
 
 var score = 0
+var lives = 3
+var respawn_wait_time = 2.0
+var cats: Dictionary[StringName, Variant] = {}
 var total_points: int
 
 @onready var snacks: Node2D = $Snacks
 @onready var hud: CanvasLayer = $HUD
+@onready var kotki: Node2D = $Kotki
 
 
 func _ready() -> void:
@@ -14,6 +18,17 @@ func _ready() -> void:
 	var snack_nodes = snacks.get_children()
 	for snack in snack_nodes:
 		snack.connect("collect_snack", add_score)
+		
+	for child in kotki.get_children():
+		if child is CharacterBody2D:
+			var cat_name = child.cat_name.to_lower()
+			var cat_respawn_timer = create_respawn_timer()
+			cat_respawn_timer.connect("timeout", child._on_respawn_timer_timeout)
+			var cat_objects = {
+				respawn_timer = cat_respawn_timer,
+				reference = child
+			}
+			cats.set(cat_name, cat_objects)
 	
 
 func add_score() -> void:
@@ -24,8 +39,34 @@ func add_score() -> void:
 	win_check()
 	
 	
-	
 func win_check() -> void:
 	if score == total_points:
 		hud.win()
 		
+	
+func lose_check() -> bool:
+	if lives < 1:
+		hud.lose()
+		Engine.time_scale = 0.4
+
+	return lives < 1
+
+
+func cat_died(cat_name: String) -> void:
+	print(cat_name + " is dead.")
+	lives -= 1
+	
+	var is_over = lose_check()
+	if not is_over:
+		var cat_objects = cats.get(cat_name)
+		var respawn_timer = cat_objects.respawn_timer
+		if respawn_timer:
+			respawn_timer.start()
+
+
+func create_respawn_timer() -> Timer:
+	var timer := Timer.new()
+	add_child(timer)
+	timer.wait_time = respawn_wait_time
+	timer.one_shot = true
+	return timer
