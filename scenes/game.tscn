@@ -1,9 +1,10 @@
-[gd_scene load_steps=80 format=4 uid="uid://b8h4l518sionq"]
+[gd_scene load_steps=81 format=4 uid="uid://b8h4l518sionq"]
 
 [ext_resource type="Script" uid="uid://cab6wpery64r4" path="res://scripts/game_manager.gd" id="1_rysoc"]
 [ext_resource type="PackedScene" uid="uid://cphwv4vaft32m" path="res://scenes/cat.tscn" id="2_ca42v"]
 [ext_resource type="Texture2D" uid="uid://bs1mdn3vsh8hf" path="res://assets/sprites/table.png" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://uqdshihvrpsh" path="res://assets/sprites/kotki-sheet.png" id="3_rysoc"]
+[ext_resource type="Script" uid="uid://5ct1vx57rf84" path="res://scenes/camera_2d.gd" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://clorocjlx51s3" path="res://assets/sprites/polka.png" id="4_kvuet"]
 [ext_resource type="Texture2D" uid="uid://cxlg24hkt6047" path="res://assets/sprites/background.png" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cr7ehj08aorbw" path="res://scenes/killzone.tscn" id="5_iywne"]
@@ -524,15 +525,6 @@ animated_sprite = NodePath("AnimatedSprite2D")
 jump_height = 350
 move_speed = 250
 
-[node name="Camera2D" type="Camera2D" parent="GameManager/Kotki/Honcia"]
-zoom = Vector2(2.5, 2.5)
-limit_left = 100
-limit_top = 200
-limit_bottom = 900
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/Kotki/Honcia"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ssvqc")
@@ -552,6 +544,23 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_ca42v")
 animation = &"move"
 autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="GameManager" node_paths=PackedStringArray("player1", "player2")]
+position = Vector2(518, 618)
+zoom = Vector2(2, 2)
+process_callback = 0
+limit_left = 100
+limit_top = 200
+limit_bottom = 900
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+script = ExtResource("4_264po")
+player1 = NodePath("../Kotki/Honcia")
+player2 = NodePath("../Kotki/Kazik")
+min_zoom = 1.7
+zoom_margin = 450.0
+zoom_speed = 0.7
 
 [node name="Snacks" type="Node2D" parent="GameManager"]
 position = Vector2(526, 789)

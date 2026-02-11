@@ -12,10 +12,12 @@ signal Died
 @onready var ground_detector: RayCast2D = $GroundDetector
 @onready var game_manager: Node = %GameManager
 @onready var explosion_sprite: AnimatedSprite2D = $ExplosionSprite
+@onready var state_machine: Node = $StateMachine
 
 
 var dead = false
 var last_safe_position
+
 
 func _ready() -> void:
 	Died.connect(game_manager.cat_died)
@@ -31,14 +33,20 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 
 
-func _on_died(cat_name: String) -> void:
+func change_state_to(state_name: String):
+	state_machine.on_child_transition(state_machine.current_state, state_name)
+	
+
+
+func _on_died(_cat_name: String) -> void:
+	change_state_to("fall")
 	dead = true
 	animated_sprite.flip_v = true
 	explosion_sprite.play("explode")
 
 
 func respawn() -> void:
-	print(cat_name + " respawned!")
+	change_state_to("rest")
 	dead = false
 	animated_sprite.flip_v = false
 	position = last_safe_position

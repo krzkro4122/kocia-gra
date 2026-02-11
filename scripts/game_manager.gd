@@ -5,6 +5,7 @@ var lives = 3
 var respawn_wait_time = 2.0
 var cats: Dictionary[StringName, Variant] = {}
 var total_points: int
+var game_is_over: bool
 
 @onready var snacks: Node2D = $Snacks
 @onready var hud: CanvasLayer = $HUD
@@ -47,6 +48,7 @@ func win_check() -> void:
 func lose_check() -> bool:
 	if lives < 1:
 		hud.lose()
+		game_is_over = true
 		Engine.time_scale = 0.4
 
 	return lives < 1
@@ -55,9 +57,10 @@ func lose_check() -> bool:
 func cat_died(cat_name: String) -> void:
 	print(cat_name + " is dead.")
 	lives -= 1
+	if not game_is_over:
+		hud.lose_life()
 	
-	var is_over = lose_check()
-	if not is_over:
+	if not lose_check():
 		var cat_objects = cats.get(cat_name)
 		var respawn_timer = cat_objects.respawn_timer
 		if respawn_timer:

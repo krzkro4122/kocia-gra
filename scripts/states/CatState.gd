@@ -2,8 +2,8 @@ extends Node
 
 class_name CatState
 
+@warning_ignore("unused_signal")
 signal Transitioned
-
 
 @export var cat: CharacterBody2D
 
