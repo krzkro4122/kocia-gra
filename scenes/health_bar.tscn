@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://boaxutng51shj"]
+
+[ext_resource type="Script" uid="uid://drt37hfgfius" path="res://scripts/health_bar.gd" id="1_kdjhy"]
+[ext_resource type="PackedScene" uid="uid://b5uug7pj1l4p8" path="res://scenes/life_bubble.tscn" id="2_srckl"]
+
+[node name="HealthBar" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+size_flags_stretch_ratio = 5.64
+script = ExtResource("1_kdjhy")
+lives = 3
+
+[node name="LifeBubble3" parent="." instance=ExtResource("2_srckl")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 0.0
+offset_right = 160.0
+offset_bottom = 0.0
+
+[node name="LifeBubble2" parent="." instance=ExtResource("2_srckl")]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 0.0
+offset_right = 99.0
+offset_bottom = 0.0
+
+[node name="LifeBubble" parent="." instance=ExtResource("2_srckl")]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 0.0
+offset_right = 39.0
+offset_bottom = 0.0
