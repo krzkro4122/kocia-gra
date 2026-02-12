@@ -7,9 +7,10 @@ var cats: Dictionary[StringName, Variant] = {}
 var total_points: int
 var game_is_over: bool
 
-@onready var snacks: Node2D = $Snacks
+@onready var snacks: Node2D = $"../Snacks"
+@onready var kotki: Node2D = $"../Kotki"
 @onready var hud: CanvasLayer = $HUD
-@onready var kotki: Node2D = $Kotki
+@onready var end_game_timer: Timer = $EndGameTimer
 
 
 func _ready() -> void:
@@ -41,15 +42,19 @@ func add_score() -> void:
 	
 	
 func win_check() -> void:
-	if score == total_points:
-		hud.win()
+	if not game_is_over and score == total_points:
+		hud.win()		
+		game_is_over = true
+		Engine.time_scale = 0.4
+		end_game_timer.start()
 		
 	
 func lose_check() -> bool:
-	if lives < 1:
+	if not game_is_over and lives < 1:
 		hud.lose()
 		game_is_over = true
 		Engine.time_scale = 0.4
+		end_game_timer.start()
 
 	return lives < 1
 
@@ -73,3 +78,8 @@ func create_respawn_timer() -> Timer:
 	timer.wait_time = respawn_wait_time
 	timer.one_shot = true
 	return timer
+
+
+func _on_end_game_timer_timeout() -> void:
+	Engine.time_scale = 1.0
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")

@@ -1,91 +1,91 @@
 [gd_scene load_steps=81 format=4 uid="uid://b8h4l518sionq"]
 
-[ext_resource type="Script" uid="uid://cab6wpery64r4" path="res://scripts/game_manager.gd" id="1_rysoc"]
-[ext_resource type="PackedScene" uid="uid://cphwv4vaft32m" path="res://scenes/cat.tscn" id="2_ca42v"]
-[ext_resource type="Texture2D" uid="uid://bs1mdn3vsh8hf" path="res://assets/sprites/table.png" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://uqdshihvrpsh" path="res://assets/sprites/kotki-sheet.png" id="3_rysoc"]
-[ext_resource type="Script" uid="uid://5ct1vx57rf84" path="res://scripts/camera_2d.gd" id="4_264po"]
-[ext_resource type="Texture2D" uid="uid://clorocjlx51s3" path="res://assets/sprites/polka.png" id="4_kvuet"]
-[ext_resource type="Texture2D" uid="uid://cxlg24hkt6047" path="res://assets/sprites/background.png" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://cr7ehj08aorbw" path="res://scenes/killzone.tscn" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://dcxh8ignqgkul" path="res://scenes/moving_shelf_vertical.tscn" id="6_264po"]
-[ext_resource type="PackedScene" uid="uid://rjnepp3j62db" path="res://scenes/snack.tscn" id="6_p57ef"]
-[ext_resource type="PackedScene" uid="uid://c3ubcm2ihku8u" path="res://scenes/moving_shelf_horizontal.tscn" id="6_ssvqc"]
-[ext_resource type="Texture2D" uid="uid://bixwfkmw4fdid" path="res://assets/sprites/wyspa.png" id="6_trtic"]
-[ext_resource type="PackedScene" uid="uid://cictskio1k1wr" path="res://scenes/plants/fikus.tscn" id="7_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://dfwhmx1x5g2al" path="res://scenes/plants/ananas.tscn" id="8_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://dwfrs73huvsn0" path="res://scenes/plants/palma.tscn" id="9_dinhu"]
-[ext_resource type="PackedScene" uid="uid://bkv11ntgx2h0w" path="res://scenes/plants/ziemiokulkas.tscn" id="11_trtic"]
-[ext_resource type="PackedScene" uid="uid://bxyd40ig1x7nl" path="res://scenes/pong_box.tscn" id="12_dinhu"]
-[ext_resource type="PackedScene" uid="uid://c6oex88824cby" path="res://scenes/ui/hud.tscn" id="15_ir15t"]
-[ext_resource type="PackedScene" uid="uid://lm56qewpi53h" path="res://scenes/static_background.tscn" id="18_ssvqc"]
+[ext_resource type="Script" uid="uid://cab6wpery64r4" path="res://scripts/game_manager.gd" id="1_4fww7"]
+[ext_resource type="PackedScene" uid="uid://c6oex88824cby" path="res://scenes/ui/hud.tscn" id="2_gvm5i"]
+[ext_resource type="PackedScene" uid="uid://cphwv4vaft32m" path="res://scenes/cat.tscn" id="3_jrfo0"]
+[ext_resource type="Texture2D" uid="uid://uqdshihvrpsh" path="res://assets/sprites/kotki-sheet.png" id="4_db1r7"]
+[ext_resource type="Script" uid="uid://5ct1vx57rf84" path="res://scripts/camera_2d.gd" id="5_6gwlt"]
+[ext_resource type="PackedScene" uid="uid://rjnepp3j62db" path="res://scenes/snack.tscn" id="6_c2nc4"]
+[ext_resource type="PackedScene" uid="uid://dcxh8ignqgkul" path="res://scenes/moving_shelf_vertical.tscn" id="7_vhxpm"]
+[ext_resource type="PackedScene" uid="uid://c3ubcm2ihku8u" path="res://scenes/moving_shelf_horizontal.tscn" id="8_arkx4"]
+[ext_resource type="PackedScene" uid="uid://bxyd40ig1x7nl" path="res://scenes/pong_box.tscn" id="9_jqv5m"]
+[ext_resource type="Texture2D" uid="uid://bs1mdn3vsh8hf" path="res://assets/sprites/table.png" id="10_noix2"]
+[ext_resource type="Texture2D" uid="uid://clorocjlx51s3" path="res://assets/sprites/polka.png" id="11_025c5"]
+[ext_resource type="Texture2D" uid="uid://cxlg24hkt6047" path="res://assets/sprites/background.png" id="12_bw3ef"]
+[ext_resource type="Texture2D" uid="uid://bixwfkmw4fdid" path="res://assets/sprites/wyspa.png" id="13_07dy8"]
+[ext_resource type="PackedScene" uid="uid://cr7ehj08aorbw" path="res://scenes/killzone.tscn" id="14_3gp1u"]
+[ext_resource type="PackedScene" uid="uid://cictskio1k1wr" path="res://scenes/plants/fikus.tscn" id="15_igeo0"]
+[ext_resource type="PackedScene" uid="uid://dfwhmx1x5g2al" path="res://scenes/plants/ananas.tscn" id="16_y71nm"]
+[ext_resource type="PackedScene" uid="uid://dwfrs73huvsn0" path="res://scenes/plants/palma.tscn" id="17_6d4iq"]
+[ext_resource type="PackedScene" uid="uid://bkv11ntgx2h0w" path="res://scenes/plants/ziemiokulkas.tscn" id="18_7plwd"]
+[ext_resource type="PackedScene" uid="uid://lm56qewpi53h" path="res://scenes/static_background.tscn" id="19_agrr7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qj77p"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(560, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhpo5"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(630, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3yqft"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1225, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqrhc"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1260, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rqfw"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(455, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4hty"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(490, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2g7jn"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(525, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0fbc"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(665, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1ht8"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1330, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4nme"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1365, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbygh"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1400, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(0, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(35, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(70, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(105, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(140, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(175, 0, 35, 35)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ssvqc"]
@@ -178,103 +178,103 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gxwf"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(385, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6bdu"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1015, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o41wd"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1155, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cfvt6"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1190, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v46rm"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(280, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_asb3o"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(315, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qurxi"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(350, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ev3f"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1050, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c2kib"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1435, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rof4w"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1470, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_503a6"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(1505, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1j6l"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(735, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pl11u"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(770, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhx41"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(805, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qnb83"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(840, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(875, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_suyxu"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(910, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(945, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjqat"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(735, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ew5t"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(770, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1gmf"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(805, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84rlo"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(840, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uti3m"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(875, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ynlg"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(910, 0, 35, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqqe3"]
-atlas = ExtResource("3_rysoc")
+atlas = ExtResource("4_db1r7")
 region = Rect2(945, 0, 35, 35)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ca42v"]
@@ -405,7 +405,7 @@ tile_data = PackedInt32Array(0, 589827, 0, 65536, 3, 0, 131072, 458755, 0, 1, 72
 tile_data = PackedInt32Array(0, 3, 0, 65536, 458755, 0, 131072, 458755, 0, 196608, 458755, 0, 1, 131075, 0, 2, 65539, 0, 65538, 524291, 0, 131074, 524291, 0, 196610, 524291, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kice"]
-texture = ExtResource("3_lnu2h")
+texture = ExtResource("10_noix2")
 0:0/0 = 0
 0:0/0/z_index = 10
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.9226189, -8, -3.829134)
@@ -415,6 +415,7 @@ texture = ExtResource("3_lnu2h")
 2:0/0 = 0
 2:0/0/z_index = 10
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.9226189, -8, -3.829134)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.8579702, -8, -3.956892)
 3:0/0 = 0
 3:0/0/z_index = 3
 4:0/0 = 0
@@ -435,7 +436,7 @@ texture = ExtResource("3_lnu2h")
 11:0/0/z_index = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5newe"]
-texture = ExtResource("4_kvuet")
+texture = ExtResource("11_025c5")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.1133547, -8, -4.0584507)
 1:0/0 = 0
@@ -447,6 +448,8 @@ texture = ExtResource("4_kvuet")
 [sub_resource type="TileSet" id="TileSet_iywne"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 0
 sources/3 = SubResource("TileSetAtlasSource_1kice")
 sources/5 = SubResource("TileSetAtlasSource_5newe")
 pattern_0 = SubResource("TileMapPattern_rysoc")
@@ -454,7 +457,7 @@ pattern_1 = SubResource("TileMapPattern_ssvqc")
 pattern_2 = SubResource("TileMapPattern_264po")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
-texture = ExtResource("4_lbhrr")
+texture = ExtResource("12_bw3ef")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -472,9 +475,10 @@ tile_data = PackedInt32Array(0, 131072, 0, 65536, 0, 0, 1, 262144, 0, 65537, 655
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_264po"]
-texture = ExtResource("4_kvuet")
+texture = ExtResource("11_025c5")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.0126987, -8, -4.037236)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.0558147, -8, -4.0558147)
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -483,16 +487,20 @@ texture = ExtResource("4_kvuet")
 
 [sub_resource type="TileSet" id="TileSet_trtic"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_rysoc")
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_264po")
 pattern_0 = SubResource("TileMapPattern_1kice")
 pattern_1 = SubResource("TileMapPattern_5newe")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
-texture = ExtResource("6_trtic")
+texture = ExtResource("13_07dy8")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.0172987, -8, -2.0709496)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.0172987, -8, -2.0709496)
 3:0/0 = 0
@@ -500,6 +508,8 @@ texture = ExtResource("6_trtic")
 [sub_resource type="TileSet" id="TileSet_rysoc"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_ca42v")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
@@ -507,45 +517,23 @@ distance = -3.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kvpfn"]
 
-[node name="Game" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_rysoc")
+script = ExtResource("1_4fww7")
 
-[node name="HUD" parent="GameManager" instance=ExtResource("15_ir15t")]
+[node name="HUD" parent="GameManager" instance=ExtResource("2_gvm5i")]
 
-[node name="Kotki" type="Node2D" parent="GameManager"]
-position = Vector2(-1, 271)
+[node name="RespawnTimer" type="Timer" parent="GameManager"]
+wait_time = 2.0
+one_shot = true
 
-[node name="Honcia" parent="GameManager/Kotki" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("2_ca42v")]
-position = Vector2(293, 419)
-cat_name = "honcia"
-animated_sprite = NodePath("AnimatedSprite2D")
-jump_height = 350
-move_speed = 250
+[node name="EndGameTimer" type="Timer" parent="GameManager"]
+wait_time = 1.5
+one_shot = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/Kotki/Honcia"]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_ssvqc")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Kazik" parent="GameManager/Kotki" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("2_ca42v")]
-position = Vector2(166, 421)
-cat_name = "kazik"
-animated_sprite = NodePath("AnimatedSprite2D")
-jump_height = 350
-move_speed = 250
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/Kotki/Kazik"]
-texture_filter = 1
-position = Vector2(0, 1)
-sprite_frames = SubResource("SpriteFrames_ca42v")
-animation = &"move"
-autoplay = "idle"
-
-[node name="Camera2D" type="Camera2D" parent="GameManager" node_paths=PackedStringArray("player1", "player2")]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
 position = Vector2(518, 618)
 zoom = Vector2(2, 2)
 limit_left = 100
@@ -554,81 +542,107 @@ limit_bottom = 900
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
-script = ExtResource("4_264po")
+script = ExtResource("5_6gwlt")
 player1 = NodePath("../Kotki/Honcia")
 player2 = NodePath("../Kotki/Kazik")
 max_zoom_factor = 2.6
 zoom_margin = 410.0
 zoom_speed = 0.7
 
-[node name="Snacks" type="Node2D" parent="GameManager"]
+[node name="Kotki" type="Node2D" parent="."]
+position = Vector2(-1, 271)
+
+[node name="Honcia" parent="Kotki" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("3_jrfo0")]
+position = Vector2(293, 419)
+cat_name = "honcia"
+animated_sprite = NodePath("AnimatedSprite2D")
+jump_height = 350
+move_speed = 250
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Kotki/Honcia"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ssvqc")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Kazik" parent="Kotki" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("3_jrfo0")]
+position = Vector2(166, 421)
+cat_name = "kazik"
+animated_sprite = NodePath("AnimatedSprite2D")
+jump_height = 350
+move_speed = 250
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Kotki/Kazik"]
+texture_filter = 1
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_ca42v")
+animation = &"move"
+autoplay = "idle"
+
+[node name="Snacks" type="Node2D" parent="."]
 position = Vector2(526, 789)
 
-[node name="Snack" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(-76, -43)
 
-[node name="Snack2" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack2" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(24, -89)
 
-[node name="Snack3" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack3" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(133, -46)
 
-[node name="Snack4" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack4" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(328, 3)
 
-[node name="Snack5" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack5" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(470, -42)
 
-[node name="Snack6" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack6" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(776, -171)
 
-[node name="Snack7" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack7" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1359, -95)
 
-[node name="Snack9" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack9" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1646, -77)
 
-[node name="Snack10" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack10" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1065, -78)
 
-[node name="Snack11" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack11" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1498, -447)
 
-[node name="Snack15" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack15" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1446, -447)
 
-[node name="Snack12" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack12" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1255, -400)
 
-[node name="Snack13" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack13" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1017, -356)
 
-[node name="Snack14" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack14" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(778, -314)
 
-[node name="Snack8" parent="GameManager/Snacks" instance=ExtResource("6_p57ef")]
+[node name="Snack8" parent="Snacks" instance=ExtResource("6_c2nc4")]
 position = Vector2(1358, -127)
-
-[node name="RespawnTimer" type="Timer" parent="GameManager"]
-wait_time = 2.0
-one_shot = true
 
 [node name="Platforms" type="Node2D" parent="."]
 position = Vector2(-1, 271)
 
 [node name="MovingShelfs" type="Node2D" parent="Platforms"]
 
-[node name="MovingShelfVertical" parent="Platforms/MovingShelfs" instance=ExtResource("6_264po")]
+[node name="MovingShelfVertical" parent="Platforms/MovingShelfs" instance=ExtResource("7_vhxpm")]
 position = Vector2(1126, 513)
 
-[node name="MovingShelfHorizontal" parent="Platforms/MovingShelfs" instance=ExtResource("6_ssvqc")]
+[node name="MovingShelfHorizontal" parent="Platforms/MovingShelfs" instance=ExtResource("8_arkx4")]
 position = Vector2(1692, 480)
 
 [node name="Boxes" type="Node2D" parent="Platforms"]
 z_index = 2
 position = Vector2(547, 536)
 
-[node name="PongBox" parent="Platforms/Boxes" instance=ExtResource("12_dinhu")]
+[node name="PongBox" parent="Platforms/Boxes" instance=ExtResource("9_jqv5m")]
 position = Vector2(738, 7.9999995)
 
 [node name="Tiles" type="Node2D" parent="Platforms"]
@@ -659,7 +673,7 @@ z_index = 2
 tile_map_data = PackedByteArray("AAALAB0AAAABAAAAAAALAB4AAAAAAAAAAAALAB8AAAAAAAAAAAALACAAAAAAAAAAAAALACEAAAAAAAAAAAALACIAAAAAAAAAAAAMAB0AAAABAAAAAAAMAB4AAAAAAAAAAAAMAB8AAAAAAAAAAAAMACAAAAAAAAAAAAAMACEAAAAAAAAAAAAMACIAAAAAAAAAAAANAB0AAAABAAAAAAANAB4AAAAAAAAAAAANAB8AAAAAAAAAAAANACAAAAAAAAAAAAANACEAAAAAAAAAAAANACIAAAAAAAAAAAAOAB0AAAABAAAAAAAOAB4AAAAAAAAAAAAOAB8AAAAAAAAAAAAOACAAAAAAAAAAAAAOACEAAAAAAAAAAAAOACIAAAAAAAAAAAAPAB0AAAABAAAAAAAPAB4AAAAAAAAAAAAPAB8AAAAAAAAAAAAPACAAAAAAAAAAAAAPACEAAAAAAAAAAAAPACIAAAAAAAAAAAAQAB0AAAABAAAAAAAQAB4AAAAAAAAAAAAQAB8AAAAAAAAAAAAQACAAAAAAAAAAAAAQACEAAAAAAAAAAAAQACIAAAAAAAAAAAARAB0AAAABAAAAAAARAB4AAAAAAAAAAAARAB8AAAAAAAAAAAARACAAAAAAAAAAAAARACEAAAAAAAAAAAARACIAAAAAAAAAAAASAB0AAAABAAAAAAASAB4AAAAAAAAAAAASAB8AAAAAAAAAAAASACAAAAAAAAAAAAASACEAAAAAAAAAAAASACIAAAAAAAAAAAATAB0AAAABAAAAAAATAB4AAAAAAAAAAAATAB8AAAAAAAAAAAATACAAAAAAAAAAAAATACEAAAAAAAAAAAATACIAAAAAAAAAAAAUAB0AAAACAAAAAAAUAB4AAAADAAAAAAAUAB8AAAADAAAAAAAUACAAAAADAAAAAAAUACEAAAADAAAAAAAUACIAAAADAAAAAAAIAB0AAAABAAAAAAAJAB0AAAABAAAAAAAKAB0AAAABAAAAAAAFAB0AAAABAAAAAAAGAB0AAAABAAAAAAAHAB0AAAABAAAAAAAFAB4AAAAAAAAAAAAFAB8AAAAAAAAAAAAFACAAAAAAAAAAAAAFACEAAAAAAAAAAAAFACIAAAAAAAAAAAAGAB4AAAAAAAAAAAAGAB8AAAAAAAAAAAAGACAAAAAAAAAAAAAGACEAAAAAAAAAAAAGACIAAAAAAAAAAAAHAB4AAAAAAAAAAAAHAB8AAAAAAAAAAAAHACAAAAAAAAAAAAAHACEAAAAAAAAAAAAHACIAAAAAAAAAAAAIAB4AAAAAAAAAAAAIAB8AAAAAAAAAAAAIACAAAAAAAAAAAAAIACEAAAAAAAAAAAAIACIAAAAAAAAAAAAJAB4AAAAAAAAAAAAJAB8AAAAAAAAAAAAJACAAAAAAAAAAAAAJACEAAAAAAAAAAAAJACIAAAAAAAAAAAAKAB4AAAAAAAAAAAAKAB8AAAAAAAAAAAAKACAAAAAAAAAAAAAKACEAAAAAAAAAAAAKACIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_rysoc")
 
-[node name="Killzone" parent="." instance=ExtResource("5_iywne")]
+[node name="Killzone" parent="." instance=ExtResource("14_3gp1u")]
 position = Vector2(343, 875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -677,25 +691,26 @@ position = Vector2(546, 807)
 [node name="Plants" type="Node2D" parent="Decorations"]
 z_index = 2
 
-[node name="Fikus" parent="Decorations/Plants" instance=ExtResource("7_u5sy4")]
+[node name="Fikus" parent="Decorations/Plants" instance=ExtResource("15_igeo0")]
 position = Vector2(982, -110)
 
-[node name="Ananas" parent="Decorations/Plants" instance=ExtResource("8_kvpfn")]
+[node name="Ananas" parent="Decorations/Plants" instance=ExtResource("16_y71nm")]
 position = Vector2(7, -75)
 
-[node name="Ananas2" parent="Decorations/Plants" instance=ExtResource("8_kvpfn")]
+[node name="Ananas2" parent="Decorations/Plants" instance=ExtResource("16_y71nm")]
 position = Vector2(807, -353)
 
-[node name="Palma" parent="Decorations/Plants" instance=ExtResource("9_dinhu")]
+[node name="Palma" parent="Decorations/Plants" instance=ExtResource("17_6d4iq")]
 position = Vector2(813, -154)
 
-[node name="Palma2" parent="Decorations/Plants" instance=ExtResource("9_dinhu")]
+[node name="Palma2" parent="Decorations/Plants" instance=ExtResource("17_6d4iq")]
 position = Vector2(1691, -142)
 scale = Vector2(3.720039, 3.720039)
 
-[node name="Ziemiokulkas2" parent="Decorations/Plants" instance=ExtResource("11_trtic")]
+[node name="Ziemiokulkas2" parent="Decorations/Plants" instance=ExtResource("18_7plwd")]
 position = Vector2(1532, -473)
 
-[node name="StaticBackground" parent="." instance=ExtResource("18_ssvqc")]
+[node name="StaticBackground" parent="." instance=ExtResource("19_agrr7")]
 
 [connection signal="timeout" from="GameManager/RespawnTimer" to="GameManager" method="_on_respawn_timer_timeout"]
+[connection signal="timeout" from="GameManager/EndGameTimer" to="GameManager" method="_on_end_game_timer_timeout"]

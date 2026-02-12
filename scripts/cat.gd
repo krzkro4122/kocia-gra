@@ -9,6 +9,7 @@ signal Died
 @export var jump_height: int
 @export var move_speed: int
 
+@onready var safe_spot_detector: RayCast2D = $SafeSpotDetector
 @onready var ground_detector: RayCast2D = $GroundDetector
 @onready var game_manager: Node = %GameManager
 @onready var explosion_sprite: AnimatedSprite2D = $ExplosionSprite
@@ -27,7 +28,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if not dead:
 		
-		if self.is_on_floor_only() and ground_detector.is_colliding():
+		if self.is_on_floor() and safe_spot_detector.is_colliding():
 			last_safe_position = position
 		
 		move_and_slide()

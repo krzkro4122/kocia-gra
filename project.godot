@@ -68,3 +68,4 @@ kazik_action={
 
 2d_physics/layer_1="furniture"
 2d_physics/layer_2="cats"
+2d_physics/layer_3="safe_ground"
