@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://boaxutng51shj"]
 
-[ext_resource type="Script" uid="uid://drt37hfgfius" path="res://scripts/health_bar.gd" id="1_kdjhy"]
-[ext_resource type="PackedScene" uid="uid://b5uug7pj1l4p8" path="res://scenes/life_bubble.tscn" id="2_srckl"]
+[ext_resource type="Script" uid="uid://drt37hfgfius" path="res://scripts/ui/health_bar.gd" id="1_kdjhy"]
+[ext_resource type="PackedScene" uid="uid://b5uug7pj1l4p8" path="res://scenes/ui/life_bubble.tscn" id="2_srckl"]
 
 [node name="HealthBar" type="Control"]
 z_index = 10

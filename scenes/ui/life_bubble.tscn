@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5uug7pj1l4p8"]
 
 [ext_resource type="Texture2D" uid="uid://xkqjguj08h7s" path="res://assets/sprites/explosion.png" id="1_vbnok"]
-[ext_resource type="Script" uid="uid://7cngwaw1yh27" path="res://scripts/life_bubble.gd" id="1_xc0mi"]
-[ext_resource type="Script" uid="uid://dotgydka7ys1u" path="res://scripts/animated_texture_rect.gd" id="3_23y4v"]
+[ext_resource type="Script" uid="uid://7cngwaw1yh27" path="res://scripts/ui/life_bubble.gd" id="1_xc0mi"]
+[ext_resource type="Script" uid="uid://dotgydka7ys1u" path="res://scripts/ui/animated_texture_rect.gd" id="3_23y4v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_23y4v"]
 atlas = ExtResource("1_vbnok")

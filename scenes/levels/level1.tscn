@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cphwv4vaft32m" path="res://scenes/cat.tscn" id="2_ca42v"]
 [ext_resource type="Texture2D" uid="uid://bs1mdn3vsh8hf" path="res://assets/sprites/table.png" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://uqdshihvrpsh" path="res://assets/sprites/kotki-sheet.png" id="3_rysoc"]
-[ext_resource type="Script" uid="uid://5ct1vx57rf84" path="res://scenes/camera_2d.gd" id="4_264po"]
+[ext_resource type="Script" uid="uid://5ct1vx57rf84" path="res://scripts/camera_2d.gd" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://clorocjlx51s3" path="res://assets/sprites/polka.png" id="4_kvuet"]
 [ext_resource type="Texture2D" uid="uid://cxlg24hkt6047" path="res://assets/sprites/background.png" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cr7ehj08aorbw" path="res://scenes/killzone.tscn" id="5_iywne"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dwfrs73huvsn0" path="res://scenes/plants/palma.tscn" id="9_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bkv11ntgx2h0w" path="res://scenes/plants/ziemiokulkas.tscn" id="11_trtic"]
 [ext_resource type="PackedScene" uid="uid://bxyd40ig1x7nl" path="res://scenes/pong_box.tscn" id="12_dinhu"]
-[ext_resource type="PackedScene" uid="uid://c6oex88824cby" path="res://scenes/hud.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://c6oex88824cby" path="res://scenes/ui/hud.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://lm56qewpi53h" path="res://scenes/static_background.tscn" id="18_ssvqc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qj77p"]
@@ -404,7 +404,7 @@ tile_data = PackedInt32Array(0, 589827, 0, 65536, 3, 0, 131072, 458755, 0, 1, 72
 [sub_resource type="TileMapPattern" id="TileMapPattern_264po"]
 tile_data = PackedInt32Array(0, 3, 0, 65536, 458755, 0, 131072, 458755, 0, 196608, 458755, 0, 1, 131075, 0, 2, 65539, 0, 65538, 524291, 0, 131074, 524291, 0, 196610, 524291, 0)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kice"]
 texture = ExtResource("3_lnu2h")
 0:0/0 = 0
 0:0/0/z_index = 10
@@ -434,7 +434,7 @@ texture = ExtResource("3_lnu2h")
 11:0/0 = 0
 11:0/0/z_index = 2
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trtic"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5newe"]
 texture = ExtResource("4_kvuet")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.1133547, -8, -4.0584507)
@@ -447,8 +447,8 @@ texture = ExtResource("4_kvuet")
 [sub_resource type="TileSet" id="TileSet_iywne"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
-sources/3 = SubResource("TileSetAtlasSource_lbhrr")
-sources/5 = SubResource("TileSetAtlasSource_trtic")
+sources/3 = SubResource("TileSetAtlasSource_1kice")
+sources/5 = SubResource("TileSetAtlasSource_5newe")
 pattern_0 = SubResource("TileMapPattern_rysoc")
 pattern_1 = SubResource("TileMapPattern_ssvqc")
 pattern_2 = SubResource("TileMapPattern_264po")
@@ -548,7 +548,6 @@ autoplay = "idle"
 [node name="Camera2D" type="Camera2D" parent="GameManager" node_paths=PackedStringArray("player1", "player2")]
 position = Vector2(518, 618)
 zoom = Vector2(2, 2)
-process_callback = 0
 limit_left = 100
 limit_top = 200
 limit_bottom = 900
@@ -558,8 +557,8 @@ position_smoothing_speed = 2.0
 script = ExtResource("4_264po")
 player1 = NodePath("../Kotki/Honcia")
 player2 = NodePath("../Kotki/Kazik")
-min_zoom = 1.7
-zoom_margin = 450.0
+max_zoom_factor = 2.6
+zoom_margin = 410.0
 zoom_speed = 0.7
 
 [node name="Snacks" type="Node2D" parent="GameManager"]
