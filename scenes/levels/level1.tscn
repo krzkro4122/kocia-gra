@@ -174,7 +174,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"rest",
-"speed": 2.0
+"speed": 1.5
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gxwf"]
@@ -562,7 +562,7 @@ move_speed = 250
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Kotki/Honcia"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ssvqc")
-animation = &"idle"
+animation = &"rest"
 autoplay = "idle"
 
 [node name="Kazik" parent="Kotki" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("3_jrfo0")]

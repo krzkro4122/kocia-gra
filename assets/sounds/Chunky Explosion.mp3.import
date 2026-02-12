@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpxxa3tdyrppo"
+path="res://.godot/imported/Chunky Explosion.mp3-8e8a602bfc49f9861c445e4a6536d14b.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Chunky Explosion.mp3"
+dest_files=["res://.godot/imported/Chunky Explosion.mp3-8e8a602bfc49f9861c445e4a6536d14b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,9 @@
 extends Control
 
+@onready var start_button: Button = $Buttons/StartButton
 
 func _ready() -> void:
-	$VBoxContainer/StartButton.grab_focus()
+	start_button.grab_focus()
 
 
 func _on_start_button_pressed() -> void:

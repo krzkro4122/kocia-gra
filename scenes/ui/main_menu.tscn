@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://cqt7is7a8i8mj"]
+[gd_scene load_steps=30 format=3 uid="uid://cqt7is7a8i8mj"]
 
 [ext_resource type="Script" uid="uid://yxmswlq1b3ef" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
 [ext_resource type="Theme" uid="uid://b0agi2la8568i" path="res://assets/themes/hud.tres" id="2_1g8jr"]
 [ext_resource type="Script" uid="uid://dotgydka7ys1u" path="res://scripts/ui/animated_texture_rect.gd" id="3_x2yvf"]
 [ext_resource type="Texture2D" uid="uid://uqdshihvrpsh" path="res://assets/sprites/kotki-sheet.png" id="4_x2yvf"]
+[ext_resource type="Texture2D" uid="uid://bbr36tbtqw7e4" path="res://assets/sprites/wsad.png" id="5_x2yvf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otr3d"]
 atlas = ExtResource("4_x2yvf")
@@ -116,6 +117,38 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1h5l"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw24t"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dct7"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qilvv"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(0, 0, 32.10085, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbte4"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0hcc"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qch7b"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ovp2"]
+atlas = ExtResource("5_x2yvf")
+region = Rect2(256, 0, 32, 32)
+
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -125,7 +158,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fe2o3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -134,13 +167,29 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.40070656, 0.41302085, 0.40686372, 1)
 
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -404.0
+offset_top = 115.0
+offset_right = 396.0
+offset_bottom = 340.0
+grow_horizontal = 2
+theme = ExtResource("2_1g8jr")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.34117648)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 200
+text = "Kocia gra"
+
 [node name="Honcia" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 215.0
-offset_top = 174.0
-offset_right = 515.0
-offset_bottom = 474.0
+offset_left = 206.0
+offset_top = 539.0
+offset_right = 506.0
+offset_bottom = 839.0
 texture = SubResource("AtlasTexture_otr3d")
 script = ExtResource("3_x2yvf")
 sprites = SubResource("SpriteFrames_btxxm")
@@ -150,54 +199,210 @@ auto_play = true
 [node name="Kazik" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 1389.0
-offset_top = 592.0
-offset_right = 1689.0
-offset_bottom = 892.0
+offset_left = 1393.0
+offset_top = 539.0
+offset_right = 1693.0
+offset_bottom = 839.0
 texture = SubResource("AtlasTexture_m1kxf")
+flip_h = true
 script = ExtResource("3_x2yvf")
 sprites = SubResource("SpriteFrames_y1h5l")
 auto_play = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="KazikControls" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="KazikControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 883.0
+offset_right = 1549.0
+offset_bottom = 923.0
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_y1h5l")
+
+[node name="TextureRect2" type="TextureRect" parent="KazikControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1584.0
+offset_top = 960.99994
+offset_right = 1624.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_pw24t")
+
+[node name="TextureRect3" type="TextureRect" parent="KazikControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 960.99994
+offset_right = 1549.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_5dct7")
+
+[node name="TextureRect4" type="TextureRect" parent="KazikControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1432.0
+offset_top = 960.99994
+offset_right = 1472.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_qilvv")
+
+[node name="HonciakControls" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -1188.0
+offset_right = -1148.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HonciakControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 883.0
+offset_right = 1549.0
+offset_bottom = 923.0
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_jbte4")
+
+[node name="Label" type="Label" parent="HonciakControls/TextureRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -204.0
-offset_top = -172.0
-offset_right = 204.0
-offset_bottom = 172.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.4390244
+offset_right = 2.4390259
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1g8jr")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="HonciakControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1584.0
+offset_top = 960.99994
+offset_right = 1624.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_e0hcc")
+
+[node name="Label" type="Label" parent="HonciakControls/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.4390244
+offset_right = 2.4390259
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1g8jr")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="HonciakControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 960.99994
+offset_right = 1549.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_qch7b")
+
+[node name="Label" type="Label" parent="HonciakControls/TextureRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.4390244
+offset_right = 2.4390259
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1g8jr")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="HonciakControls"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1432.0
+offset_top = 960.99994
+offset_right = 1472.0
+offset_bottom = 1000.99994
+scale = Vector2(1.64, 1.64)
+texture = SubResource("AtlasTexture_4ovp2")
+
+[node name="Label" type="Label" parent="HonciakControls/TextureRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.4390244
+offset_right = 2.4390259
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1g8jr")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -204.0
+offset_top = -541.0
+offset_right = 204.0
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = ExtResource("2_1g8jr")
 text = "No to yś"
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Buttons"]
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = ExtResource("2_1g8jr")
 text = "Opcyje"
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="Buttons"]
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = ExtResource("2_1g8jr")
 text = "Chcę do domu"
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]

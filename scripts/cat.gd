@@ -12,7 +12,10 @@ signal Died
 @onready var safe_spot_detector: RayCast2D = $SafeSpotDetector
 @onready var ground_detector: RayCast2D = $GroundDetector
 @onready var game_manager: Node = %GameManager
+
 @onready var explosion_sprite: AnimatedSprite2D = $ExplosionSprite
+@onready var explosion_sound: AudioStreamPlayer2D = $ExplosionSound
+
 @onready var state_machine: Node = $StateMachine
 
 
@@ -44,6 +47,8 @@ func _on_died(_cat_name: String) -> void:
 	dead = true
 	animated_sprite.flip_v = true
 	explosion_sprite.play("explode")
+	explosion_sound.play()
+	
 
 
 func respawn() -> void:
