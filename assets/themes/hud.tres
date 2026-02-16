@@ -2,14 +2,14 @@
 
 [ext_resource type="FontFile" uid="uid://6p2gv2egpu2d" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_wr3i8"]
 [ext_resource type="StyleBox" uid="uid://dh2g0ythjv820" path="res://assets/themes/buttonStyleBox.tres" id="2_hjpe0"]
-[ext_resource type="StyleBox" uid="uid://crt1otvy1nupt" path="res://assets/themes/buttonStyleBoxFocusHover.tres" id="3_h04ay"]
+[ext_resource type="StyleBox" uid="uid://crt1otvy1nupt" path="res://assets/themes/buttonStyleBoxFocus.tres" id="3_h04ay"]
 
 [resource]
 default_font = ExtResource("1_wr3i8")
 default_font_size = 64
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-Button/colors/font_focus_color = Color(0.9254902, 0.8117647, 0, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(0.92654717, 0.810333, 3.85046e-07, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)

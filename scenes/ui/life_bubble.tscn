@@ -1,36 +1,69 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5uug7pj1l4p8"]
+[gd_scene load_steps=12 format=3 uid="uid://b5uug7pj1l4p8"]
 
-[ext_resource type="Texture2D" uid="uid://xkqjguj08h7s" path="res://assets/sprites/explosion.png" id="1_vbnok"]
-[ext_resource type="Script" uid="uid://7cngwaw1yh27" path="res://scripts/ui/life_bubble.gd" id="1_xc0mi"]
-[ext_resource type="Script" uid="uid://dotgydka7ys1u" path="res://scripts/ui/animated_texture_rect.gd" id="3_23y4v"]
+[ext_resource type="Script" uid="uid://7cngwaw1yh27" path="res://scripts/ui/life_bubble.gd" id="1_5oh58"]
+[ext_resource type="Texture2D" uid="uid://c7gcrrufgw5sc" path="res://assets/sprites/serduszka.png" id="2_5oh58"]
+[ext_resource type="Script" uid="uid://dotgydka7ys1u" path="res://scripts/ui/animated_texture_rect.gd" id="3_sbrxy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_23y4v"]
-atlas = ExtResource("1_vbnok")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_feji0"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(0, 0, 21, 21)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y5h1l"]
-atlas = ExtResource("1_vbnok")
-region = Rect2(0, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbrxy"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(21, 0, 21, 21)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cnneq"]
-atlas = ExtResource("1_vbnok")
-region = Rect2(0, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oh58"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(21, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ftd"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(42, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgs4d"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(63, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bjcy"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(84, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjc7y"]
+atlas = ExtResource("2_5oh58")
+region = Rect2(105, 0, 21, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ttskw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_23y4v")
+"texture": SubResource("AtlasTexture_sbrxy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y5h1l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cnneq")
+"texture": SubResource("AtlasTexture_feji0")
 }],
-"loop": false,
-"name": &"default",
-"speed": 5.5
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oh58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ftd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgs4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bjcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjc7y")
+}],
+"loop": true,
+"name": &"pop",
+"speed": 8.0
 }]
 
 [node name="LifeBubble" type="Control"]
@@ -38,17 +71,24 @@ layout_mode = 3
 anchors_preset = 0
 offset_top = -28.0
 offset_bottom = -28.0
-script = ExtResource("1_xc0mi")
+script = ExtResource("1_5oh58")
 
 [node name="AnimatedTextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 1.0
+offset_left = -32.0
+offset_top = -36.0
+offset_right = 32.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_23y4v")
-script = ExtResource("3_23y4v")
+texture = SubResource("AtlasTexture_feji0")
+script = ExtResource("3_sbrxy")
 sprites = SubResource("SpriteFrames_ttskw")
-stop_at_last_frame = true
+current_animation = "idle"
+frame_index = 1
+auto_play = true
+playing = true
